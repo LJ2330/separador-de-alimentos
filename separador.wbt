@@ -1,0 +1,110 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/conveyors/protos/ConveyorBelt.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/nvidia/jetbot/protos/JetBotRaspberryPiCamera.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/niryo/ned/protos/Ned.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/PlasticCrate.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/fruits/protos/Apple.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.26595145528545683 0.3573385138036775 -0.8953094492878575 1.3870517582248352
+  position -1.033015749109984 5.923368752862751 3.2509443753766614
+}
+TexturedBackground {
+  texture "factory"
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 1.26 -0.09 0.06
+  floorSize 100 100
+}
+Wall {
+  translation -1.04509 0.133019 0.720919
+  rotation -1.0400199999970338e-06 0.9999999999971481 -2.1500099999938683e-06 -1.4831853071795864
+  name "wall(2)"
+  size 0.1 0.1 0.6
+}
+Wall {
+  translation -1.62396 -0.05 -0.0161907
+  rotation -0.0047910585486796945 0.9999846970819536 -0.002766109162082794 3.46695e-06
+  name "wall(3)"
+  size 0.1 0.5 0.83
+}
+Wall {
+  translation -1.04509 -0.236981 0.720919
+  rotation -1.0400199999970338e-06 0.9999999999971481 -2.1500099999938683e-06 -1.4831853071795864
+  name "wall(1)"
+  size 0.1 0.1 0.6
+}
+Wall {
+  translation -1.05754 -0.04 0.674832
+  rotation 0 1 0 -1.4831853071795864
+  size 0.1 0.3 0.6
+}
+PlasticCrate {
+  translation 6.28 -0.07 0.1
+  size 0.6 0.6 0.5
+}
+Ned {
+  hidden position_0_0 0.4999997693118168
+  hidden rotation_1 0 0 1 0.4999995327632159
+  hidden position_1_0 -0.2999999412035701
+  hidden rotation_2 0.1477944090140486 -0.977895105616815 -0.14791205182427325 1.5923511992812773
+  hidden position_2_0 0.20000048880205354
+  hidden rotation_3 0 0 1 0.20000048880205268
+  hidden position_3_0 -0.4000005387216352
+  hidden rotation_4 -0.42452427492303607 -0.6403948173254488 -0.6400575114345396 2.337792318534989
+  hidden position_4_0 0.6000000033602191
+  hidden rotation_5 -0.2837391755336766 -0.915960652506978 0.2837396047901327 1.6584651951828615
+  hidden position_5_0 -0.4999999958294773
+  hidden rotation_6 -0.240152113575785 0.9405116022006331 -0.24034327215689064 1.631294356310312
+  hidden position_7_0 -2.511772215615547e-07
+  hidden position_7_1 2.5117714976121293e-07
+  hidden translation_8 0.01455 -0.024400039996629732 0.01961315743268644
+  hidden translation_9 0.01455 -0.024399959999643724 -0.021066089069286358
+  translation 2.84 0.399996 0.369989
+  rotation 2.346409999993541e-06 1.125079999996903e-14 0.9999999999972473 3.14159
+  controller "nedC"
+}
+PlasticCrate {
+  translation 3.63 0.53 0.14
+  name "plastic crate(1)"
+}
+ConveyorBelt {
+  hidden translation_1 7.686296044084884e-11 -3.159278394448961e-13 0.6074819496006334
+  hidden rotation_1 -0.5786241920511099 0.8155942890754783 -8.157122436496046e-07 3.255797820229459e-07
+  hidden linearVelocity_1 -2.950484453963574e-12 -1.905558792485219e-16 -1.1368751392118758e-16
+  hidden angularVelocity_1 -1.494831824059704e-11 1.7622209667911894e-06 -1.6593559156691297e-13
+  translation 2.45 -0.08 -0.11
+  rotation 0 1 0 4.692820414042842e-06
+  size 7 0.4 0.81
+  borderThickness 0.01
+  borderHeight -0.04
+  speed 0.03
+  acceleration 2
+}
+Robot {
+  translation -0.109533 -0.282415 0
+  rotation 0 0 1 -0.261795307179586
+  children [
+    JetBotRaspberryPiCamera {
+      translation -0.152253 0.0130471 0.715149
+      rotation 0.01591300555299511 0.049479817266454305 0.998648348487869 1.80397
+      width 2000
+    }
+  ]
+  controller "camara"
+}
+Apple {
+  hidden linearVelocity_0 0.7484856253777373 6.559737559019603e-06 -4.078860422957635e-06
+  hidden angularVelocity_0 -0.0001318153464121739 14.43768760683888 7.05891662024369e-07
+  translation 2.6825539464891195 1.6514880480753372e-05 0.7497453482669928
+  rotation -5.423253097448575e-06 0.9999999999745759 -4.6299683361915455e-06 -1.2338164941018448
+}
